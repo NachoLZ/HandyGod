@@ -28,15 +28,18 @@ public class PlayerInputScript : MonoBehaviour
     internal bool isRightPressed;
     internal bool isSpaceBarPressed;
 
+    //Collisions Booleans
+    internal bool wallCollision = false;
+
     // A lil something
-    private  float xScale;
+    //private  float xScale;
 
 
     // Start is called before the first frame update
     void Start()
     {
         print("PlayerInputScript Starting now");
-        xScale = transform.localScale.x;
+        //xScale = transform.localScale.x;
     }
 
     // Update is called once per frame
@@ -51,6 +54,8 @@ public class PlayerInputScript : MonoBehaviour
         {
             isGrabbing = false;
         }
+
+        print("Is Grabbing?: " + isGrabbing);
 
         if (Physics2D.Linecast(transform.position, GroundCheck.position, 1 << LayerMask.NameToLayer("Ground")))
         {

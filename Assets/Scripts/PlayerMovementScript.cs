@@ -20,7 +20,7 @@ public class PlayerMovementScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (playerScript.inputScript.isRightPressed)
+        if (playerScript.inputScript.isRightPressed && !playerScript.inputScript.isGrabbing)
         {
             MovePlayerRight();
             if (playerScript.inputScript.isSpaceBarPressed && playerScript.inputScript.isGrounded)
@@ -32,7 +32,7 @@ public class PlayerMovementScript : MonoBehaviour
                 PlayerJump();
             }
         }
-        else if (playerScript.inputScript.isLeftPressed)
+        else if (playerScript.inputScript.isLeftPressed && !playerScript.inputScript.isGrabbing)
         {
             MovePlayerLeft();
             if (playerScript.inputScript.isSpaceBarPressed && playerScript.inputScript.isGrounded)
@@ -44,10 +44,10 @@ public class PlayerMovementScript : MonoBehaviour
                 PlayerJump();
             }
         }
-        else if (playerScript.inputScript.isGrabbing)
-        {
-            WallJump();
-        }
+        //else if (playerScript.inputScript.isGrabbing)
+        //{
+        //    WallJump();
+        //}
         else if (playerScript.inputScript.isSpaceBarPressed && playerScript.inputScript.isGrounded)
         {
             PlayerJump();
@@ -97,7 +97,6 @@ public class PlayerMovementScript : MonoBehaviour
     private void MovePlayerRight()
     {
         playerScript.rb2d.velocity = new Vector2(playerScript.walkSpeed, playerScript.rb2d.velocity.y);
-
         if (playerScript.inputScript.isGrounded)
         {
             playerScript.anim.Play("pink_run");
@@ -130,8 +129,8 @@ public class PlayerMovementScript : MonoBehaviour
         }
     }
 
-    private void WallJump()
-    {
-        playerScript.anim.Play("pink_WallJump");
-    }
+    //private void WallJump()
+    //{
+    //    playerScript.anim.Play("pink_WallJump");
+    //}
 }
