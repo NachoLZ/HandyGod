@@ -63,7 +63,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\CursorObject.cs" />
     <Compile Include="Assets\Scripts\HandCursor\CursorManager.cs" />
+    <Compile Include="Assets\Scripts\HandCursor\MouseController.cs" />
     <Reference Include="UnityEngine">
       <HintPath>D:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
