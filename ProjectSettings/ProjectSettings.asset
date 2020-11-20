@@ -629,10 +629,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 955b3471-e04d-48e5-97e7-834db4b7e763
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: Proyecto Handy God
+  organizationId: unity_wr15ylul8mzt2q
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
