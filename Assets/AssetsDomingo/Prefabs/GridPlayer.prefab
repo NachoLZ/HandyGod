@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8466832639135713775}
   - component: {fileID: 8466832639135713774}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GridPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8466832639258832480}
   - component: {fileID: 8466832639258832481}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: LeftSide
   m_TagString: Sides
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8466832639288925823}
   - component: {fileID: 8466832639288925816}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Rightside
   m_TagString: Sides
   m_Icon: {fileID: 0}
@@ -4798,7 +4798,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2134723461
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -4818,9 +4818,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8466832640292938250}
   - component: {fileID: 8466832640292938251}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ceiling
-  m_TagString: Untagged
+  m_TagString: Sides
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4875,7 +4875,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8466832640404835481}
   - component: {fileID: 8466832640404835482}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
