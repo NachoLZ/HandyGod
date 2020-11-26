@@ -13,6 +13,7 @@ public class CursorManager : MonoBehaviour {
     }
 
     [SerializeField] private List<CursorAnimation> cursorAnimationList;
+    [SerializeField] private Texture2D GrabTexture;
 
     private CursorAnimation cursorAnimation;
 
@@ -38,16 +39,32 @@ public class CursorManager : MonoBehaviour {
 
     private void Update() {
         frameTimer -= Time.deltaTime;
-        if (frameTimer <= 0f) {
+        if (Input.GetMouseButton(0)) {
+            Cursor.SetCursor(GrabTexture, cursorAnimation.offset, CursorMode.Auto);  
+        }
+        else if (frameTimer <= 0f)
+        {
             frameTimer += cursorAnimation.frameRate;
             currentFrame = (currentFrame + 1) % frameCount;
             Cursor.SetCursor(cursorAnimation.textureArray[currentFrame], cursorAnimation.offset, CursorMode.Auto);
         }
+        //GrabCursor();
     }
 
     public void SetActiveCursorType(CursorType cursorType) {
         SetActiveCursorAnimation(GetCursorAnimation(cursorType));
         OnCursorChanged?.Invoke(this, new OnCursorChangedEventArgs { cursorType = cursorType });
+    }
+    
+    private void GrabCursor() {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("Drageado");
+
+            Cursor.SetCursor(GrabTexture, cursorAnimation.offset, CursorMode.Auto);
+        }
+
+
     }
 
     private CursorAnimation GetCursorAnimation(CursorType cursorType) {
@@ -77,5 +94,7 @@ public class CursorManager : MonoBehaviour {
         public Vector2 offset;
 
     }
+
+
 
 }
