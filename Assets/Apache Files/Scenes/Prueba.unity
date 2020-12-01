@@ -28359,10 +28359,27 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5321447812143677346, guid: 6418d8bc3ab0fd74dadbef13e78b5f25,
         type: 3}
+    - target: {fileID: 1184198881772159617, guid: 928f51a9700db3a48bc6fec85a1e4ae3,
+        type: 3}
+      propertyPath: explototionRef
+      value: 
+      objectReference: {fileID: 8372085564567652763, guid: 8c478ed387a5f6148a6c4e6a52768167,
+        type: 3}
+    - target: {fileID: 1184198881772159617, guid: 928f51a9700db3a48bc6fec85a1e4ae3,
+        type: 3}
+      propertyPath: explosionRef
+      value: 
+      objectReference: {fileID: 8372085564567652763, guid: 8c478ed387a5f6148a6c4e6a52768167,
+        type: 3}
     - target: {fileID: 1184198881772159618, guid: 928f51a9700db3a48bc6fec85a1e4ae3,
         type: 3}
       propertyPath: m_Name
       value: Tree
+      objectReference: {fileID: 0}
+    - target: {fileID: 1184198881772159618, guid: 928f51a9700db3a48bc6fec85a1e4ae3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1184198881772159677, guid: 928f51a9700db3a48bc6fec85a1e4ae3,
         type: 3}
