@@ -26,6 +26,13 @@ public class DestructableRigidBody : MonoBehaviour
         rb2d.AddForce(forceDirection);
         rb2d.AddTorque(randTorque);
 
+        // Uncomment 
+        // Invoke("DestroySelf", Random.Range(2.5f, 4f));
+
+    }
+
+    void DestroySelf() {
+        Destroy(gameObject);
     }
 
 }
