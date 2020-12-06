@@ -50,7 +50,7 @@ public class PlayerRope : MonoBehaviour
         }
 
         if ((Input.GetKeyDown("s") || Input.GetKeyDown("down")) && attached) {
-            Slide(-11);
+            Slide(-1);
         }
 
         if (Input.GetKeyDown(KeyCode.Space)) {
@@ -103,8 +103,11 @@ public class PlayerRope : MonoBehaviour
 
         if (!attached) {
             if (col.gameObject.tag == "Rope") {
+                
                 if (attachedTo != col.gameObject.transform.parent) {
+
                     if(disregard == null || col.gameObject.transform.parent.gameObject != disregard) {
+                        Debug.Log("HOLA");
                         Attach(col.gameObject.GetComponent<Rigidbody2D>());
                     }
                 }
