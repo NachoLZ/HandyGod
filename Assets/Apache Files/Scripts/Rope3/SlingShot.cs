@@ -41,6 +41,8 @@ public class SlingShot : MonoBehaviour
         
 
         this.DrawRope();
+
+        /*
         if (Input.GetMouseButtonDown(0)) {
             this.moveToMouse = true;
         }
@@ -57,7 +59,8 @@ public class SlingShot : MonoBehaviour
         float ratio = (currX - xStart) / (xEnd - xStart);
         if (ratio > 0) {
             this.indexMousePos = (int)(this.segmentLength * ratio);
-        }
+        }*/
+
     }
 
     private void FixedUpdate() {
