@@ -2,10 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class SlingShot : MonoBehaviour
 {
 
@@ -18,13 +14,17 @@ public class SlingShot : MonoBehaviour
     private int segmentLength = 35;
     private float lineWidth = 0.1f;
 
+
     //Sling shot 
     private bool moveToMouse = false;
     private Vector3 mousePositionWorld;
     private int indexMousePos;
+    //[SerializeField]
+    //private GameObject followTarget;
 
     // Use this for initialization
     void Start() {
+
         this.lineRenderer = this.GetComponent<LineRenderer>();
         Vector3 ropeStartPoint = StartPoint.position;
 
@@ -32,10 +32,14 @@ public class SlingShot : MonoBehaviour
             this.ropeSegments.Add(new RopeSegment(ropeStartPoint));
             ropeStartPoint.y -= ropeSegLen;
         }
+
     }
 
     // Update is called once per frame
     void Update() {
+
+        
+
         this.DrawRope();
         if (Input.GetMouseButtonDown(0)) {
             this.moveToMouse = true;
@@ -92,6 +96,7 @@ public class SlingShot : MonoBehaviour
         this.ropeSegments[this.ropeSegments.Count - 1] = endSegment;
 
         for (int i = 0; i < this.segmentLength - 1; i++) {
+
             RopeSegment firstSeg = this.ropeSegments[i];
             RopeSegment secondSeg = this.ropeSegments[i + 1];
 
@@ -130,6 +135,7 @@ public class SlingShot : MonoBehaviour
     }
 
     private void DrawRope() {
+       
         float lineWidth = this.lineWidth;
         lineRenderer.startWidth = lineWidth;
         lineRenderer.endWidth = lineWidth;
